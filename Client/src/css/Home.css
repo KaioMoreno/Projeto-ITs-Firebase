@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.div-principal-its {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 50vw;
+
+}
+
+.img-logo-vix {
+    margin-top: 25px;
+    width: 150px;
+    border: 1px solid;
+    border-radius: 80px;
+}
+
+.h1-principal {
+    color: white;
+    margin: 30px;
+}
+
+.p-principal {
+    color: white;
+    font-size: 20px;
+}
+
+.div-setores {
+    padding: 25px;
+}
+
+.div-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-sections {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin: 9px;
+    background-color: rgb(235, 231, 226);
+    width: 28vw;
+    border-radius: 10px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.div-conteudo-apr {
+    position: relative;
+    left: 130px;
+}
+
+.link-apr {
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 27px;
+    background-color: rgb(235, 231, 226);
+    width: 15vw;
+    border-radius: 10px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.link-sections:hover, .link-apr:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+.div-icon-chamadaemergencia {
+    position: fixed;
+    text-align: center;
+    bottom: 50px;
+    right: 100px;
+}
+
+.div-icon-chamadaemergencia:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.icon-chamada-emergencia {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.p-icon-chamadaemergencia {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    letter-spacing: 1px;
+}

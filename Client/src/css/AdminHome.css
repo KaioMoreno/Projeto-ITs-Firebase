@@ -1,0 +1,615 @@
+
+.conteudo-admin-home {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.div-logo-admin{
+    margin: 20px;
+}
+
+.div-info-admin {
+    padding: 7px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: 10px;
+}
+
+.h1-admin {
+    color: white;
+}
+
+.p-text {
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo-vix-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 80px;
+}
+
+.div-setores-admin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+    border-radius: 10px;
+    width: 90%;
+    padding: 30px;
+}
+
+.div-setores-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-setores{
+    width: 50vw;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.div-setor {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 35vw;
+    margin: 8px;
+} 
+
+.modal-admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2%;
+    width: 100%;
+    background-color: #465125;
+}
+
+.div-content-infos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0505055a;
+    border-radius: 15px;
+}   
+
+.info-admin-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.226);
+    padding: 50px;
+    width: 30vw;
+    border-radius: 15px;
+}
+
+.modal-setores {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #465125;
+}
+
+.edit-setores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-admin {
+    position: absolute;
+    top: 30px;
+    right: 300px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.close-admin:hover {
+    transform: scale(1.4);
+}
+
+.btn-setor{
+    padding: 15px;
+    width: 40vw;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.iconadd-img {
+    text-align: center;
+    width: 70px;
+    height: 70px;
+}
+
+.btn-criar-documento {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.btn-criar-documento:hover {
+    transform: scale(1.2);
+    border: 2px solid black;
+}
+
+.icone-container {
+    position: relative;
+    display: inline-block;
+}
+
+.iconecluir-img {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.iconecluir-img:hover {
+    transform: scale(1.25);
+}
+
+.legenda-iconeexcluir {
+    visibility: hidden;
+    width: 120px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 120%;
+    background-color: rgba(0, 0, 0, 0.178);
+    margin-top: 4px;
+    z-index: 1;
+    left: 50%;
+    margin-left: -60px; /* Centraliza a legenda em relação ao ícone */
+    transition: opacity 0.3s;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.icone-container:hover .legenda-iconeexcluir {
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon-add-container {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.icon-add-document {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icon-add-document:hover {
+    transform: scale(1.25);
+}
+
+.legenda-icon-add {
+    visibility: hidden;
+    width: 120px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 120%;
+    background-color: rgba(0, 0, 0, 0.178);
+    margin-top: 4px;
+    z-index: 1;
+    left: 50%;
+    margin-left: -60px; /* Centraliza a legenda em relação ao ícone */
+    transition: opacity 0.3s;
+    font-size: 12px;
+    border-radius: 8px;
+}
+
+.icon-add-container:hover .legenda-icon-add {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.admin-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #465125
+  }
+  
+  .admin-modal-content {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid white;
+  }
+
+  .admin-imagens {
+    width: 60vw;
+    margin-top: 40px;
+    text-align: center;
+    padding: 5px;
+    margin: 12px;
+    }
+  
+  .admin-close{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    z-index: 1;
+  }
+  
+  .admin-close:hover {
+    transform: scale(1.3);
+  }
+
+.modal-create-files {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 8%;
+    width: 100%;
+    height: 100%;
+    background-color: #465125;
+}
+
+.modal-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid white;
+    background-color: #396432da;
+    padding: 80px;
+    border-radius: 15px;
+}
+
+.div-info-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -23px;
+}
+
+.logo-vix {
+    margin: 20px;
+}
+
+.p-info-modal {
+    color: white;
+    font-weight: bold;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.div-input-setor{
+    text-align: start;
+    margin: 10px;
+    
+}
+
+.lista-setores{
+    width: 23vw;
+    padding: 11px;
+    font-weight: bold;
+}
+
+.div-input-nomeArquivo {
+    text-align: center;
+    margin: 10px;
+}
+
+.input-nomearquivo {
+    width: 23vw;
+    height: 0vh;
+    padding: 15px;
+}
+
+.div-input-files{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    margin: 10px;
+    
+}
+
+.input-files {
+    width: 23vw;
+    height: 5vh;
+    font-size: 17px;
+}
+
+.div-criar-documento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-criar-pasta {
+    margin-top: 40px;
+    width: 13vw;
+}
+
+.btn-criar-pasta:hover {
+    transform: scale(1.14);
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+.close-form-files {
+    position: absolute;
+    top: -20px;
+    right: 250px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.close-form-files:hover {
+    transform: scale(1.4);
+}
+
+
+.div-confirm-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 6%;
+    width: 100%;
+    height: 100%;
+    background-color: #2b5125e4;
+}
+
+.conteudo-modal-confirm {
+    background-color: rgba(255, 255, 255, 0.839);
+    border: 2px solid black;
+    padding: 30px;
+    border-radius: 9px;
+}
+
+.p-confirm-modal {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-confirmar {
+    background-color: rgb(22, 171, 22);
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.btn-confirmar:hover {
+    transform: scale(1.12);
+}
+
+.btn-cancel:hover {
+    transform: scale(1.12);
+}
+
+.btn-cancel {
+    border: 1px solid black;
+    margin: 5px;
+    background-color: red;
+}
+
+.modal-add-documents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #465125;
+}
+
+.modal-content-adddocuments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid white;
+    background-color: #396432da;
+    padding: 80px;
+    border-radius: 15px;
+}
+
+.div-adicionar-documentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-adicionar-documentos {
+    margin-top: 40px;
+    width: 13vw;
+}
+
+@media only screen and (max-width:360px) {
+
+    .modal-form {
+        padding: 10px;
+    }
+    
+    .p-info-modal {
+        text-align: center;
+    }
+
+    .close-admin {
+        top: 30px;
+        right: 30px;
+        font-size: 35px;
+
+    }
+
+    .input-nomearquivo {
+        width: 65vw;
+    }
+
+    .input-files {
+        width: 65vw;
+        height: 5vh;
+        font-size: 17px;
+    }
+
+    .btn-criar-pasta {
+        margin-top: 20px;
+        width: 30vw;
+    }
+
+    .conteudo-modal-confirm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        
+}
+
+@media only screen and (max-width:600px) {
+
+    .modal-form {
+        padding: 10px;
+    }
+    
+    .close-form-files {
+        top: 50px;
+        right: 10px;
+        font-size: 40px;
+    }
+
+    .close-admin {
+        top: 30px;
+        right: 30px;
+        font-size: 35px;
+
+    }
+
+    .p-info-modal {
+        text-align: center;
+    }
+
+    .input-nomearquivo {
+        width: 40vw;
+    }
+
+    .input-files {
+        width: 40vw;
+        height: 5vh;
+        font-size: 17px;
+    }
+
+    .btn-criar-pasta {
+        margin-top: 20px;
+        width: 30vw;
+    }
+
+    .admin-imagens {
+        width: 90vw;
+        margin-top: 40px;
+        text-align: center;
+        padding: 5px;
+        margin: 12px;
+    }
+
+}
+
+@media only screen and (min-width:600px) {
+
+
+    .modal-form {
+        padding: 45px;
+    }
+
+    .close-admin {
+        top: 30px;
+        right: 60px;
+        font-size: 45px;
+
+    }
+
+    .close-form-files {
+        top: -20px;
+        right: 40px;
+        font-size: 40px;
+    }
+
+    .admin-imagens {
+        width: 70vw;
+        margin-top: 40px;
+        text-align: center;
+        padding: 5px;
+        margin: 12px;
+    }
+
+}
+
+@media only screen and (min-width:1200px) {
+
+    .close-admin {
+        top: 0px;
+        right: 80px;
+        font-size: 50px;
+
+    }
+
+
+    .close-form-files {
+        top: -20px;
+        right: 100px;
+        font-size: 40px;
+    }
+
+}

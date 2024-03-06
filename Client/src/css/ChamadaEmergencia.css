@@ -1,0 +1,56 @@
+.div-btn-voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+table {
+    margin: 20px;
+    width: 700px;
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+td {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.603);
+    padding: 10px;
+    border: 1px solid white;
+}
+
+@media only screen and (max-width:360px) {
+
+    table {
+        width: 85vw;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+    table {
+        width: 85vw;
+    }
+}
+
+@media only screen and (min-width:600px) {
+
+    table {
+        width: 60vw;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    table {
+        width: 700px;
+    }
+
+}
