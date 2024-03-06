@@ -22,7 +22,7 @@ const userController = {
             })
 
         } catch(error) {
-            console.error("ERRO:", error) // MUDAR DEPOIS DE REALIZAR TESTES
+            console.error("ERRO:", error)
         }
     },
 
@@ -46,7 +46,7 @@ const userController = {
             }
 
         } catch(error) {
-            console.error("ERROR:", error) // MUDAR DEPOIS DE REALIZAR TESTES
+            console.error("ERROR:", error)
         }
     },
 }

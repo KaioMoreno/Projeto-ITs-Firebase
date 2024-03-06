@@ -26,7 +26,7 @@ const Login = () => {
       setShowLoading(true);
   
       try {
-        const response = await axios.post('http://localhost:8080/login', { email, password });
+        const response = await axios.post('URL/login', { email, password });
   
         if (response.data.token) {
           login(response.data.token);

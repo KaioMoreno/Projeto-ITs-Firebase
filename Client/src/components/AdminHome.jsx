@@ -79,7 +79,7 @@ const AdminHome = () => {
           setLoader(true);
 
           if(storedToken) {
-            const response = await axios.post('https://backend-its-vix-6ctnlxpfjq-uc.a.run.app/admin/home', formData, {
+            const response = await axios.post('URL/admin/home', formData, {
               headers: {
                 Authorization: `Bearer ${storedToken}`
               },
@@ -123,7 +123,7 @@ const AdminHome = () => {
     try {
     
       if(storedToken) {
-        const response = await axios.delete(`https://backend-its-vix-6ctnlxpfjq-uc.a.run.app/admin/home/${setor}/${nome}`, {
+        const response = await axios.delete(`URL/admin/home/${setor}/${nome}`, {
         headers: {
               Authorization: `Bearer ${storedToken}`
             },
@@ -154,7 +154,7 @@ const AdminHome = () => {
       const storedToken = Cookies.get('token');
   
       if (storedToken) {
-        const response = await axios.get(`https://backend-its-vix-6ctnlxpfjq-uc.a.run.app/${rota}`, {
+        const response = await axios.get(`URL/${rota}`, {
           headers: {
             Authorization: `Bearer ${storedToken}`
           }
@@ -191,7 +191,7 @@ const AdminHome = () => {
           }
         
 
-          const response = await axios.post(`https://backend-its-vix-6ctnlxpfjq-uc.a.run.app/admin/home/add/${selectedSetor}/${nome.toUpperCase()}`, formData, {
+          const response = await axios.post(`URL/admin/home/add/${selectedSetor}/${nome.toUpperCase()}`, formData, {
               headers: {
                 Authorization: `Bearer ${storedToken}`,
               },

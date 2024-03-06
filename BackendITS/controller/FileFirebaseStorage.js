@@ -33,24 +33,23 @@ const FileFirebaseStorage = {
                 prefix: caminhoSetor
             });
     
-            // Extrai apenas os nomes das pastas
             const nomesPastas = objetos
                 .map(objeto => objeto.name.replace(caminhoSetor, ''))
                 .filter(nome => nome.includes('/'))
                 .map(nome => nome.split('/')[0]);
     
-            // Remove duplicatas
+
             const pastasUnicas = Array.from(new Set(nomesPastas));
     
-            // Objeto para armazenar as pastas e seus arquivos
+           
             const pastasComArquivos = {};
     
-            // Para cada pasta única, listar os arquivos dentro dela
+           
             await Promise.all(pastasUnicas.map(async pasta => {
                 const [arquivos] = await bucket.getFiles({
                     prefix: `${caminhoSetor}${pasta}/`
                 });
-                // Extrair apenas os nomes dos arquivos
+               
                 const nomesArquivos = arquivos.map(arquivo => arquivo.name.replace(`${caminhoSetor}${pasta}/`, ''));
                 // Para cada arquivo, obter a URL de download
                 const urlsArquivos = await Promise.all(arquivos.map(async arquivo => {
@@ -63,7 +62,7 @@ const FileFirebaseStorage = {
                         url: url[0]
                     };
                 }));
-                // Armazenar a pasta e seus arquivos no objeto
+             
                 pastasComArquivos[pasta] = urlsArquivos;
             }));
     
@@ -81,14 +80,14 @@ const FileFirebaseStorage = {
     
         try {
             if (files.length !== 0) {
-                // Caminho da pasta onde os arquivos serão salvos
+                
                 const caminhoPasta = `${setor}/${nomeArquivo}/`;
     
-                // Salva cada arquivo dentro da pasta criada
+               
                 const savePromises = files.map(async (file) => {
                     const caminho = `${caminhoPasta}${file.originalname}`;
     
-                    // Salve o conteúdo do arquivo no Firebase Storage
+                   
                     await bucket.file(caminho).save(file.buffer, {
                         metadata: {
                             contentType: file.mimetype
@@ -98,14 +97,14 @@ const FileFirebaseStorage = {
                     return `Arquivo ${file.originalname} salvo com sucesso em ${caminho}`;
                 });
     
-                // Execute todas as promessas de salvamento em paralelo
+               
                 const resultados = await Promise.all(savePromises);
     
-                // Retorne uma resposta de sucesso com os resultados
+               
                 res.json({ Message: 'Arquivos salvos com sucesso', resultados });
             }
         } catch (error) {
-            // Se ocorrer algum erro, retorne uma resposta de erro
+        
             console.error('Erro ao criar arquivo(s) no Firebase Storage:', error);
             res.status(500).json({ success: false, message: 'Erro ao criar arquivo(s) no Firebase Storage' });
         }
@@ -121,20 +120,19 @@ const FileFirebaseStorage = {
             const addDocumentos = files.map(async (file) => {
                 const caminho = `${caminhoPasta}${file.originalname}`;
     
-                // Crie um arquivo no bucket
+                
                 const arquivo = bucket.file(caminho);
     
-                // Crie um fluxo de gravação para o arquivo
                 const stream = arquivo.createWriteStream({
                     metadata: {
                         contentType: file.mimetype,
                     },
                 });
     
-                // Escreva o buffer no fluxo de gravação
+        
                 stream.end(file.buffer);
     
-                // Aguarde o término da gravação
+
                 await new Promise((resolve, reject) => {
                     stream.on('finish', resolve);
                     stream.on('error', reject);
@@ -157,7 +155,7 @@ const FileFirebaseStorage = {
         const { setor, nome } = req.params;
 
         try {
-            // Caminho completo para a pasta que será excluída
+
             const caminhoPasta = `${setor}/${nome}/`;
         
             const bucket = storage.bucket(process.env.STORAGEBUCKET);

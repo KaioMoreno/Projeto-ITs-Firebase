@@ -23,7 +23,7 @@ const FileExplorer = () => {
   
     const fetchSetores = async () => {
       try {
-        const response = await axios.get('https://backend-its-vix-6ctnlxpfjq-uc.a.run.app/PreparacaodeCargas');
+        const response = await axios.get('URL/PreparacaodeCargas');
         setFolders(response.data);
       } catch (error) {
         toast.error('Ocorreu um erro, tente novamente mais tarde!', {
