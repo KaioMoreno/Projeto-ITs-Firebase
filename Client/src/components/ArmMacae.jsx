@@ -62,17 +62,15 @@ const FileExplorer = () => {
                 {setor}
               </button>
 
-              {openFolder === setor && modalOpen && (
+              {modalOpen && openFolder === setor && (
                 <div className='modal'>
                   <div className='modal-content'>
                     <span className='close' onClick={closeModal}>
                       &times;
                     </span>
-                    {Object.keys(folders).map(folder => (
-                      <div key={folder} className='div-imagens-aprs'>
-                        {folders[folder].map(file => (
-                          <img className='imagens' key={file.nome} src={file.url} alt={file.nome}/>
-                        ))}
+                    {folders[setor].map(file => (
+                      <div key={file.nome} className='div-imagens-aprs'>
+                        <img className='admin-imagens'src={file.url} alt={file.nome} />
                       </div>
                     ))}
                   </div>
